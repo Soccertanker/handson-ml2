@@ -75,14 +75,38 @@
 
 13. What do model-based learning algorithms search for? What is the most common strategy they use to succeed? How do they make predictions?
 
+* Model-based learning seeks to generalize from a set of examples to build a model of these examples and then use that model to make predictions (page 18).
+* The most common strategy they use is to find model parameters that fit the data, and test how well those model parameters work to predict features of new data (page 20)
+
 14. Can you name four of the main challenges in Machine Learning?
+
+* Yes.
+    1. Insufficient quantity of training data: machine learning requires a lot of data to learn well. Toddlers can look at one apple and identify any fruit as being an apple or not. But machine learning algorithms can't do this; they need to look at tons of examples of apples and other fruits that are not apples (page 23).
+    2. Nonrepresentative training data: a machine learnign algorithm that is trained on nonrepresentative training data will learn improperly and not be as useful on non-training data (page 25).
+    3. Irrelevant features: the system will only be capable of learning if the training data contains enough relevant features and not too many irrelevant ones. Feature engineering uses feature selection to select the most relevant features, feature extraction to combine features to produce a more useful one, and create new features by gathering new data (page 27).
+    4. Overfitting the training data: a model may try too hard to fit the training data. If the machine learning algorithm overgeneralizes the training data, it may think all new data will follow this model. A model may perform better on new data if it can generalize better (page 27).
 
 15. If your model performs great on the training data but generalizes poorly to new instances, what is happening? Can you name three possible solutions?
 
+* The model is overfitting. It is too complex relative to the amount and noisiness of the training data (pages 27-28). The solutions can be:
+    1. Simplify the model by selecting one with fewer parameters, by reducing the number of attributes in the training data, or by constraining the model.
+    2. Gather more training data.
+    3. Reduce the noise in the training data.
+
 16. What is a test set, and why would you want to use it?
+
+* The test set is a set of data that a model is tested with. Evaluating a model on the test set gives an estimate of the generalization error, which is the error rate on new data (page 30).
 
 17. What is the purpose of a validation set?
 
+* The validation set is a portion of the training set that is held out from training, and used to evaluate several candidate models (page 31).
+
 18. What is the train-dev set, when do you need it, and how do you use it?
 
+* The validation and testing data should be as representative of new data as possible. Thus the training data may not be as representative, and is vulnerable to data mismatch. For example, maybe training data is pictures taken from the web, but validation / testing data is pictures taken by phones, which is more representative of the data that the algorithm will eventually be fed (page 32).
+* The train-dev set is useful to troubleshoot a bad model, with potential data mismatch between the training data and the validation / testing data. The train-dev set is a portion of the training set that is held out for validation.
+    * If the candidate model performs well on the train-dev set, then it is not overfitting the training set. This means any problems are likely because of a data mismatch between the training data and the validation / test data.
+
 19. What can go wrong if you tune hyperparameters using the test set?
+
+* Tuning hyperparameters using a test set can potentially cause a model to be overfit for the test set, and not generalize well with other test sets (page 31).
