@@ -57,6 +57,9 @@ Then if you're on Windows, run the following command:
 
     $ pip install --no-index -f https://github.com/Kojoley/atari-py/releases atari_py
 
+If you're on Ubuntu / WSL, run the following command before pip-installing all requirements.
+    $ sudo apt install gcc g++ cmake
+
 Finally, start Jupyter:
 
     $ jupyter notebook

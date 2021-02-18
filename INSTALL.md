@@ -40,6 +40,10 @@ If you're on Windows, and you want to go through chapter 18 on Reinforcement Lea
 
     $ pip install --no-index -f https://github.com/Kojoley/atari-py/releases atari_py
 
+## Ubuntu / Windows Subsystem for Linux (WSL)
+To install atari-py, you may need to first run the following.
+
+    $ sudo apt install gcc g++ cmake
 
 > **Warning**: TensorFlow Transform (used in chapter 13) and TensorFlow-AddOns (used in chapter 16) are not yet available on Windows, but the TensorFlow team is working on it.
 
